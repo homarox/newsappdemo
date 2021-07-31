@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/firstLoginFragment">
+
+    <fragment
+        android:id="@+id/firstLoginFragment"
+        android:name="com.dteam.newsapplication.ui.login.FirstLoginFragment"
+        tools:layout="@layout/fragment_first_login">
+        <action
+            android:id="@+id/action_firstLoginFragment_to_secondLoginFragment"
+            app:destination="@id/secondLoginFragment" />
+        <action
+            android:id="@+id/action_firstLoginFragment_to_firstRegisterFragment"
+            app:destination="@id/firstRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondLoginFragment"
+        android:name="com.dteam.newsapplication.ui.login.SecondLoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_second_login">
+        <action
+            android:id="@+id/action_secondLoginFragment_to_thirdLoginFragment"
+            app:destination="@id/thirdLoginFragment" />
+        <action
+            android:id="@+id/action_secondLoginFragment_to_mainNewsFragment"
+            app:destination="@id/mainNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdLoginFragment"
+        android:name="com.dteam.newsapplication.ui.login.ThirdLoginFragment"
+        android:label="    "
+        tools:layout="@layout/fragment_third_login" />
+    <fragment
+        android:id="@+id/firstRegisterFragment"
+        android:name="com.dteam.newsapplication.ui.login.FirstRegisterFragment"
+        android:label="Create Account"
+        tools:layout="@layout/fragment_first_register">
+        <action
+            android:id="@+id/action_firstRegisterFragment_to_secondRegisterFragment"
+            app:destination="@id/secondRegisterFragment" />
+        <action
+            android:id="@+id/action_firstRegisterFragment_to_thirdRegisterFragment"
+            app:destination="@id/thirdRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/secondRegisterFragment"
+        android:name="com.dteam.newsapplication.ui.login.SecondRegisterFragment"
+        android:label=" "
+        tools:layout="@layout/fragment_second_register">
+        <action
+            android:id="@+id/action_secondRegisterFragment_to_secondLoginFragment"
+            app:destination="@id/secondLoginFragment" />
+        <action
+            android:id="@+id/action_secondRegisterFragment_to_firstRegisterFragment"
+            app:destination="@id/firstRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/thirdRegisterFragment"
+        android:name="com.dteam.newsapplication.ui.login.ThirdRegisterFragment"
+        android:label="Active Account"
+        tools:layout="@layout/fragment_third_register">
+        <action
+            android:id="@+id/action_thirdRegisterFragment_to_fourthRegisterFragment"
+            app:destination="@id/fourthRegisterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/fourthRegisterFragment"
+        android:name="com.dteam.newsapplication.ui.login.FourthRegisterFragment"
+        android:label="Create Password"
+        tools:layout="@layout/fragment_fourth_register">
+        <action
+            android:id="@+id/action_fourthRegisterFragment_to_mainNewsFragment"
+            app:destination="@id/mainNewsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainNewsFragment"
+        android:name="com.dteam.newsapplication.ui.mainnews.MainNewsFragment"
+        android:label="News"
+        tools:layout="@layout/fragment_main_news" >
+        <action
+            android:id="@+id/action_mainNewsFragment_to_mainArticleFragment"
+            app:destination="@id/mainArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainVideoFragment"
+        android:name="com.dteam.newsapplication.ui.mainnews.MainVideoFragment"
+        android:label="Video"
+        tools:layout="@layout/fragment_main_video" >
+        <action
+            android:id="@+id/action_mainVideoFragment_to_mainArticleFragment"
+            app:destination="@id/mainArticleFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/mainInfoFragment"
+        android:name="com.dteam.newsapplication.ui.mainnews.MainInfoFragment"
+        android:label="Info"
+        tools:layout="@layout/fragment_main_info" />
+    <fragment
+        android:id="@+id/mainArticleFragment"
+        android:name="com.dteam.newsapplication.MainArticleFragment"
+        android:label="fragment_main_article"
+        tools:layout="@layout/fragment_main_article" />
+</navigation>

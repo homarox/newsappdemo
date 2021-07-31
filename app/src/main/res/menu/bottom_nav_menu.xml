@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mainNewsFragment"
+        android:title="@string/mn_bt_news"/>
+
+    <item
+        android:id="@+id/mainVideoFragment"
+        android:title="@string/mn_bt_video"/>
+
+    <item
+        android:id="@+id/mainInfoFragment"
+        android:title="@string/mn_bt_info"/>
+</menu>
